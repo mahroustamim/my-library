@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ribbon</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 320px;
+            padding: 20px;
+            text-align: center;
+            background-color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px auto;
+        }
+        .container h3 {
+            width:calc(100% + 80px);
+            position: relative;
+            left: -40px;
+            background-color: #009888;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .container h3::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -19px;
+            border-width: 10px;
+            border-color: #0e746b #0e746b transparent transparent;
+            border-style: solid;
+        }
+        .container h3::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -19px;
+            border-width: 10px;
+            border-color: #0e746b transparent transparent #0e746b;
+            border-style: solid;
+        }
+        .container {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>product title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi error, doloribus nostrum in maiores molestias dicta alias libero fugit asperiores repellendus laudantium reiciendis pariatur id! Reiciendis debitis pariatur voluptatem ipsam?</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100px;
+            margin: 200px auto;
+            padding:10px 20px;
+            position: relative;
+            font-weight: bold;
+            border-style: none;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        button:focus {
+            outline: none;
+        }
+        span{
+            position: absolute;
+            min-width: 150px;
+            background-color: black;
+            color: white;
+            padding: 5px 5px;
+            border-radius: 5px;
+            font-size: 10px;
+            left: -25px;
+            top: -40px;
+            opacity: 0;
+            transition: 1s;
+        }
+        button span::before {
+            content: "";
+            position: absolute;
+            border-width: 10px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+            left:50%;
+            transform: translateX(-50%);
+            bottom:-19px ;
+            opacity: 0;
+            transition: 1s;
+        }
+        button:hover {
+            overflow: visible;
+        }
+        button:hover span,
+        button:hover span::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <button>
+        Click
+        <span>my awesome tooltip</span>
+    </button>
+    
+</body>
+</html>

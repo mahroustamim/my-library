@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>loading</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <style>
+                body{
+                    background-color: #333;
+                }
+                .load {
+                    display: flex;
+                    justify-content: center;
+                    margin-top:40px ;
+                }
+                .load div{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: orange;
+                    margin: 0 3px; 
+                    animation-name: load;
+                    animation-duration: 1.2s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+                .two{
+                    animation-delay: 0.3s;
+                }
+                .three{
+                    animation-delay: 0.6s;
+                }
+                .four {
+                    animation-delay: 0.9s;
+                }
+                @keyframes load{
+                    0%{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    100%{
+                        transform: translateY(-20px);
+                        opacity: 0.2;
+                    }
+                }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="load">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            
+            
+        </div>
+    </body>
+
+
+</html>

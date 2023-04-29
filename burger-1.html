@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burger</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+        }
+        div {
+            width: 30px;
+            height: 20px;
+            margin: 20px auto;
+            position: relative;
+            cursor: pointer;
+        }
+        span{
+            height: 2px;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            transition: 0.5s;
+        }
+        div span:first-child {
+            top: 0;
+        }
+        div span:nth-child(2) {
+            top: 9px;
+        }
+        div span:last-child {
+            top: 18px;
+        }
+        div:hover span:nth-child(2) {
+            display: none;
+        }
+        div:hover span:first-child,
+        div:hover span:last-child {
+            top: 9px;
+            background-color: red;
+        }
+        div:hover span:first-child {
+            transform: rotate(45deg);
+        }
+        div:hover span:last-child {
+            transform: rotate(-45deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+</body>
+</html>

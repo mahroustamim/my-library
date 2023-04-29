@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        form {
+            width: 400px;
+            margin: 20px auto;
+            background-color: #eee;
+            padding: 15px;
+        }
+        form > div {
+            margin: 10px 0;
+        }
+
+        form input[type="radio"]{
+            -webkit-appearance: none;
+            appearance: none;
+            display: none;
+
+        }
+
+        form label{
+            position: relative;
+            padding-left: 25px;
+        }
+
+        form label::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            border: 1px solid #0075ff;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+        }
+
+        form input[type="radio"]:checked + label::after,
+        form input[type="radio"]:not(:checked):hover + label::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height:10px;
+            background-color: #0075ff;
+            left: 4px;
+            top: 4px;
+
+        }
+        form input[type="radio"]:not(:checked):hover + label::after {
+            opacity: 0.2;
+        }
+
+        form input[type="radio"]:checked + label {
+            color: #0075ff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form >
+        <div>
+            <input type="radio" name="os" value="mac" id="mac">
+            <label for="mac">Mac</label>
+        </div>
+        <div>
+            <input type="radio" name="os" value="windows" id="win">
+            <label for="win">Windows</label>
+        </div>
+        <div>
+            <input type="radio" name="os" value="linux" id="lin">
+            <label for="lin">Linux</label>
+        </div>
+    </form>
+    
+</body>
+</html>
